@@ -4,8 +4,6 @@ export PATH="$HOME/.local/bin:$PATH"
 alias aiform-venv="source /Users/juan/src/aiform/.venv/bin/activate"
 alias python3.12="/opt/homebrew/bin/python3.12"
 
-# Anthropic
-export ANTHROPIC_API_KEY=$(security find-generic-password -a "juan" -s "ANTHROPIC_API_KEY" -w)
 
 # secret-add: save a value in the macOS Keychain and wire up its export
 # line here, so a new API key becomes available in every future shell
@@ -49,3 +47,10 @@ secret-add() {
 if [ -e ~/src/emacs-config/emacs-config.sh ]; then
   source ~/src/emacs-config/emacs-config.sh
 fi
+
+# Keys in the keystore
+# Anthropic
+export ANTHROPIC_API_KEY=$(security find-generic-password -a "juan" -s "ANTHROPIC_API_KEY" -w)
+# DIGITALOCEAN_TOKEN (added via secret-add)
+export DIGITALOCEAN_TOKEN=$(security find-generic-password -s "DIGITALOCEAN_TOKEN" -a "$USER" -w)
+
