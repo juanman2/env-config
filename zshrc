@@ -1,4 +1,5 @@
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 
 #===
 alias aiform-venv="source /Users/juan/src/aiform/.venv/bin/activate"
