@@ -55,3 +55,4 @@ export ANTHROPIC_API_KEY=$(security find-generic-password -a "juan" -s "ANTHROPI
 # DIGITALOCEAN_TOKEN (added via secret-add)
 export DIGITALOCEAN_TOKEN=$(security find-generic-password -s "DIGITALOCEAN_TOKEN" -a "$USER" -w)
 
+eval "$(direnv hook zsh)"
