@@ -50,9 +50,4 @@ if [ -e ~/src/emacs-config/emacs-config.sh ]; then
 fi
 
 # Keys in the keystore
-# Anthropic
-export ANTHROPIC_API_KEY=$(security find-generic-password -a "juan" -s "ANTHROPIC_API_KEY" -w)
-# DIGITALOCEAN_TOKEN (added via secret-add)
-export DIGITALOCEAN_TOKEN=$(security find-generic-password -s "DIGITALOCEAN_TOKEN" -a "$USER" -w)
-
 eval "$(direnv hook zsh)"
